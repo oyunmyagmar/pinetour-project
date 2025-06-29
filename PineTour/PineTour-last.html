@@ -21,7 +21,8 @@
       rel="stylesheet"
     />
     <style>
-      .header-hero-container {
+      /* header */
+      header {
         height: 773px;
         background-image: url(images/HeroImage.png);
         background-repeat: no-repeat;
@@ -29,13 +30,12 @@
         margin: 0 auto;
       }
       .header-container {
-        width: 1440px;
+        width: 1204px;
         padding: 30px 118px;
-        box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        text-align: center;
+        box-sizing: border-box;
+        justify-content: space-between;
         margin: 0 auto;
       }
       .header-logo {
@@ -45,7 +45,6 @@
         background-size: contain;
       }
       .menu-box {
-        width: 392px;
         display: flex;
         gap: 24px;
       }
@@ -64,8 +63,10 @@
         width: 20px;
         height: 20px;
         background-image: url(images/user.png);
+        background-repeat: no-repeat;
+        background-size: auto;
       }
-      .language {
+      .header-language {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -81,33 +82,30 @@
       }
       .hero-container {
         text-align: center;
-        margin: 0 auto;
       }
-      .hero-uppertext {
+      .hero-subheading {
         font-size: 80px;
-        font-weight: 400;
         line-height: 100%;
         font-family: "Bebas Neue";
         text-transform: uppercase;
         color: rgba(232, 237, 242, 0.72);
         padding-top: 65.5px;
       }
-      .hero-maintext {
+      .hero-mainheading {
         font-size: 250px;
-        font-weight: 400;
         line-height: 100%;
         font-family: "Bebas Neue";
         color: rgba(253, 253, 254, 0.98);
         border: 2px rgba(253, 253, 254, 1);
       }
-      .hero-year {
+      .hero-number {
         font-size: 64px;
         font-weight: 900;
         line-height: 100%;
         font-family: "Hanuman";
         color: rgba(255, 255, 255, 0.8);
       }
-
+      /* location */
       .location-container {
         background-image: url(images/Location.png);
         background-repeat: no-repeat;
@@ -131,6 +129,18 @@
         justify-content: center;
         align-items: center;
         position: relative;
+      }
+      .location--Terkhiin-tsagaan-lake {
+        background-image: url(images/loc-terkhiintsagaan.png);
+      }
+      .location--Amarbayasgalant {
+        background-image: url(images/loc-amarbayasgalant.png);
+      }
+      .location-Khuvsgul {
+        background-image: url(images/loc-khuvsgullake.png);
+      }
+      .location--Khorgo {
+        background-image: url(images/loc-khorgiintogoo.png);
       }
       .location-text {
         font-size: 37px;
@@ -159,26 +169,26 @@
       .location:hover .location-shade {
         opacity: 1;
       }
-
+      /* destination */
       .destination-container {
-        width: 1440px;
-        height: 1022px;
+        max-width: 1440px;
         background-image: url(images/Roadmap.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         margin: 0 auto;
-        padding: 98px 0;
-        box-sizing: border-box;
         position: relative;
       }
-      .d-head {
+      .destination-heading {
         font-size: 42px;
         line-height: 51px;
         font-weight: 600;
         font-family: "Inter";
         color: rgba(0, 0, 0, 1);
         text-align: center;
-        margin-top: 22px;
+        padding-top: 120px;
       }
-      .d-para {
+      .destination-subheading {
         font-size: 20px;
         line-height: 24px;
         font-weight: 500;
@@ -188,12 +198,15 @@
         margin-top: 10px;
         margin-bottom: 59px;
       }
+      .destinations {
+        padding-bottom: 100px;
+      }
       .destination {
         width: 513px;
         height: 112px;
         border-radius: 120px;
         background-color: rgba(238, 233, 217, 1);
-        padding: 0 30px;
+        padding: 32px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -201,6 +214,21 @@
         border: 4px solid transparent;
         box-sizing: border-box;
         margin-left: 120px;
+      }
+      .destination--Sukhbaatar {
+        background-color: rgba(238, 233, 217, 1);
+      }
+      .destination--Amarbaysgalant {
+        background-color: rgba(139, 184, 193, 0.8);
+      }
+      .destination--Khorgiin-togoo {
+        background-color: rgba(170, 216, 215, 0.8);
+      }
+      .destination--Terkhiin-tsagaan {
+        background-color: rgba(139, 192, 189, 0.8);
+      }
+      .destination--Khuvsgul {
+        background-color: rgba(151, 204, 224, 0.8);
       }
       .destination:hover {
         border: 4px solid rgba(255, 255, 255, 1);
@@ -218,7 +246,7 @@
       .destination-image-pin {
         width: 34px;
         height: 34px;
-        background-image: url(images/pinblue.png);
+        background-image: url(images/dest-pinblue.png);
         background-size: contain;
         position: absolute;
         display: block;
@@ -227,7 +255,7 @@
       .destination:hover .destination-image {
         display: block;
       }
-      .destination-name {
+      .destination__name {
         font-size: 24px;
         line-height: 29px;
         font-weight: 500;
@@ -235,7 +263,7 @@
         color: rgba(9, 9, 11, 1);
         margin-bottom: 4px;
       }
-      .destination-location {
+      .destination__location {
         font-size: 12px;
         line-height: 15px;
         font-family: "Montserrat";
@@ -244,15 +272,15 @@
         gap: 12px;
         align-items: center;
       }
-      .destination-location::before {
+      .destination__location::before {
         content: "";
         width: 14px;
         height: 14px;
-        background-image: url(images/pinblack.png);
+        background-image: url(images/dest-pinblack.png);
         background-size: contain;
         display: block;
       }
-      .destination-day {
+      .destination__day {
         width: 52px;
         height: 52px;
         border-radius: 50%;
@@ -266,7 +294,7 @@
         justify-content: center;
         align-items: center;
       }
-
+      /* pricing */
       .price-container {
         background-image: url(images/Price.png);
         width: 1440px;
@@ -474,79 +502,63 @@
 
   <body style="margin: 0">
     <main>
-      <!-- header hero redid  -->
-      <section class="header-hero-container">
+      <!-- header -->
+      <header>
         <div class="header-container">
-          <div class="header-logo"></div>
+          <a href="--" class="header-logo"></a>
 
           <nav class="menu-box">
-            <a class="menu-item" href="https://www.google.com/">home</a>
-            <a class="menu-item" href="https://www.google.com/">about</a>
-            <a class="menu-item" href="https://www.google.com/">contact</a>
-            <a class="menu-icon" href="https://www.google.com/"></a>
+            <a class="menu-item" href="--">home</a>
+            <a class="menu-item" href="--">about</a>
+            <a class="menu-item" href="--">contact</a>
+            <a class="menu-icon" href="--"></a>
           </nav>
 
-          <div class="language">EN</div>
+          <div class="header-language">EN</div>
         </div>
 
         <div class="hero-container">
-          <div class="hero-uppertext">Pure magic</div>
-          <div class="hero-maintext">awaits!</div>
-          <div class="hero-year">2024</div>
+          <div class="hero-subheading">Pure magic</div>
+          <div class="hero-mainheading">awaits!</div>
+          <div class="hero-number">2024</div>
         </div>
-      </section>
+      </header>
 
-      <!-- location redid -->
+      <!-- location -->
       <section class="location-container">
-        <div
-          class="location"
-          style="background-image: url(images/terkhiintsagaan.png)"
-        >
+        <div class="location location--Terkhiin-tsagaan-lake">
           <div class="location-shade"></div>
           <div class="location-text">Terkhiin tsagaan lake</div>
         </div>
 
-        <div
-          class="location"
-          style="background-image: url(images/amarbayasgalant.png)"
-        >
+        <div class="location location--Amarbayasgalant">
           <div class="location-shade"></div>
           <div class="location-text">Amarbayasgalant Monastery</div>
         </div>
 
-        <div
-          class="location"
-          style="background-image: url(images/khuvsgullake.png)"
-        >
+        <div class="location location-Khuvsgul">
           <div class="location-shade"></div>
           <div class="location-text">Khuvsgul lake</div>
         </div>
 
-        <div
-          class="location"
-          style="background-image: url(images/khorgiintogoo.png)"
-        >
+        <div class="location location--Khorgo">
           <div class="location-shade"></div>
           <div class="location-text">Khorgiin togoo</div>
         </div>
       </section>
 
-      <!-- destination redid -->
+      <!-- destination -->
       <section class="destination-container">
-        <div class="d-head">Destination of Our Agency</div>
+        <div class="destination-heading">Destination of Our Agency</div>
+        <div class="destination-subheading">Pack your bags and get ready</div>
 
-        <div class="d-para">Pack your bags and get ready</div>
-
-        <div>
-          <div
-            class="destination"
-            style="background-color: rgba(238, 233, 217, 1)"
-          >
+        <div class="destinations">
+          <div class="destination destination--Sukhbaatar">
             <div>
-              <div class="destination-name">Sukhbaatar square</div>
-              <div class="destination-location">Ulaanbator</div>
+              <div class="destination__name">Sukhbaatar square</div>
+              <div class="destination__location">Ulaanbator</div>
             </div>
-            <div class="destination-day">DAY 1</div>
+            <div class="destination__day">DAY 1</div>
             <div
               class="destination-image-pin"
               style="top: 445px; left: 1165px"
@@ -554,22 +566,19 @@
             <div
               class="destination-image"
               style="
-                background-image: url(images/sukh.png);
+                background-image: url(images/pin-sukh.png);
                 top: 329px;
                 left: 1032px;
               "
             ></div>
           </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(139, 184, 193, 0.8)"
-          >
+          <div class="destination destination--Amarbaysgalant">
             <div>
-              <div class="destination-name">Amarbaysgalant monastery</div>
-              <div class="destination-location">Bulgan</div>
+              <div class="destination__name">Amarbaysgalant monastery</div>
+              <div class="destination__location">Bulgan</div>
             </div>
-            <div class="destination-day">DAY 2</div>
+            <div class="destination__day">DAY 2</div>
             <div
               class="destination-image-pin"
               style="top: 306px; left: 952px"
@@ -577,22 +586,19 @@
             <div
               class="destination-image"
               style="
-                background-image: url(images/amar.png);
+                background-image: url(images/pin-amar.png);
                 top: 218px;
                 left: 836px;
               "
             ></div>
           </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(170, 216, 215, 0.8)"
-          >
+          <div class="destination destination--Khorgiin-togoo">
             <div>
-              <div class="destination-name">Khorgiin togoo</div>
-              <div class="destination-location">Arkhangai</div>
+              <div class="destination__name">Khorgiin togoo</div>
+              <div class="destination__location">Arkhangai</div>
             </div>
-            <div class="destination-day">DAY 3</div>
+            <div class="destination__day">DAY 3</div>
             <div
               class="destination-image-pin"
               style="top: 428px; left: 780px"
@@ -600,22 +606,19 @@
             <div
               class="destination-image"
               style="
-                background-image: url(images/khorgo.png);
+                background-image: url(images/pin-khorgo.png);
                 top: 346px;
                 left: 703px;
               "
             ></div>
           </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(139, 192, 189, 0.8)"
-          >
+          <div class="destination destination--Terkhiin-tsagaan">
             <div>
-              <div class="destination-name">Terkhiin tsagaan lake</div>
-              <div class="destination-location">Arkhangai</div>
+              <div class="destination__name">Terkhiin tsagaan lake</div>
+              <div class="destination__location">Arkhangai</div>
             </div>
-            <div class="destination-day">DAY 4</div>
+            <div class="destination__day">DAY 4</div>
             <div
               class="destination-image-pin"
               style="top: 230px; left: 749px"
@@ -623,22 +626,19 @@
             <div
               class="destination-image"
               style="
-                background-image: url(images/terkh.png);
+                background-image: url(images/pin-terkh.png);
                 top: 180px;
                 left: 652px;
               "
             ></div>
           </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(151, 204, 224, 0.8)"
-          >
+          <div class="destination destination--Khuvsgul">
             <div>
-              <div class="destination-name">Khuvsgul lake</div>
-              <div class="destination-location">Khuvsgul</div>
+              <div class="destination__name">Khuvsgul lake</div>
+              <div class="destination__location">Khuvsgul</div>
             </div>
-            <div class="destination-day">DAY 5</div>
+            <div class="destination__day">DAY 5</div>
             <div
               class="destination-image-pin"
               style="top: 680px; left: 952px"
@@ -646,7 +646,7 @@
             <div
               class="destination-image"
               style="
-                background-image: url(images/khuvs.png);
+                background-image: url(images/pin-khuvs.png);
                 top: 184px;
                 left: 819px;
               "
@@ -655,7 +655,7 @@
         </div>
       </section>
 
-      <!-- price and footer redid -->
+      <!-- price and footer -->
       <section class="price-container">
         <div class="p-head">Pricing of Our Agency</div>
 
