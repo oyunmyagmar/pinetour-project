@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* header */
+      header {
+        height: 773px;
+        background-image: url(images/HeroImage.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+      }
+      .header-container {
+        width: 1204px;
+        padding: 30px 118px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      .header-logo {
+        width: 101px;
+        height: 35px;
+        background-image: url(images/logo.png);
+        background-size: contain;
+      }
+      .menu-box {
+        display: flex;
+        gap: 24px;
+      }
+      .menu-item {
+        width: 100px;
+        height: 22px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+        font-family: "Inter";
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+      .menu-icon {
+        width: 20px;
+        height: 20px;
+        background-image: url(images/user.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+      .header-language {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1);
+        font-family: "Inter";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-container {
+        text-align: center;
+      }
+      .hero-subheading {
+        font-size: 80px;
+        line-height: 100%;
+        font-family: "Bebas Neue";
+        text-transform: uppercase;
+        color: rgba(232, 237, 242, 0.72);
+        padding-top: 65.5px;
+      }
+      .hero-mainheading {
+        font-size: 250px;
+        line-height: 100%;
+        font-family: "Bebas Neue";
+        color: rgba(253, 253, 254, 0.98);
+        border: 2px rgba(253, 253, 254, 1);
+      }
+      .hero-number {
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 100%;
+        font-family: "Hanuman";
+        color: rgba(255, 255, 255, 0.8);
+      }
+      /* location */
+      .location-container {
+        background-image: url(images/Location.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+      .location {
+        width: 275.49px;
+        height: 370px;
+        margin: 65px 0;
+        padding: 0 22px;
+        box-sizing: border-box;
+        background-size: cover;
+        border-radius: 40px;
+        box-shadow: 8px 8px rgba(41, 114, 139, 0.25),
+          -8px -8px rgba(31, 114, 170, 0.46);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .location--Terkhiin-tsagaan-lake {
+        background-image: url(images/loc-terkhiintsagaan.png);
+      }
+      .location--Amarbayasgalant {
+        background-image: url(images/loc-amarbayasgalant.png);
+      }
+      .location-Khuvsgul {
+        background-image: url(images/loc-khuvsgullake.png);
+      }
+      .location--Khorgo {
+        background-image: url(images/loc-khorgiintogoo.png);
+      }
+      .location-text {
+        font-size: 37px;
+        line-height: 44px;
+        font-family: "Bebas Neue";
+        text-transform: uppercase;
+        color: rgba(253, 253, 254, 0.8);
+        text-align: center;
+        text-shadow: 0 4px 4.9px rgba(0, 0, 0, 0.65);
+        z-index: 10px;
+        position: relative;
+        transition: color 1s;
+      }
+      .location-shade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(41, 41, 41, 0.4);
+        border-radius: 40px;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+      .location:hover .location-text {
+        color: rgba(253, 253, 254, 1);
+      }
+      .location:hover .location-shade {
+        opacity: 1;
+      }
+      /* destination */
+      .destination-container {
+        max-width: 1440px;
+        background-image: url(images/Roadmap.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        position: relative;
+      }
+      .destination-heading {
+        font-size: 42px;
+        line-height: 51px;
+        font-weight: 600;
+        font-family: "Inter";
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+        padding-top: 120px;
+      }
+      .destination-subheading {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(24, 24, 27, 0.7);
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 59px;
+      }
+      .destinations {
+        padding-bottom: 100px;
+      }
+      .destination {
+        width: 513px;
+        height: 112px;
+        border-radius: 120px;
+        background-color: rgba(238, 233, 217, 1);
+        padding: 32px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border: 4px solid transparent;
+        box-sizing: border-box;
+        margin-left: 120px;
+      }
+      .destination--Sukhbaatar {
+        background-color: rgba(238, 233, 217, 1);
+      }
+      .destination--Amarbaysgalant {
+        background-color: rgba(139, 184, 193, 0.8);
+      }
+      .destination--Khorgiin-togoo {
+        background-color: rgba(170, 216, 215, 0.8);
+      }
+      .destination--Terkhiin-tsagaan {
+        background-color: rgba(139, 192, 189, 0.8);
+      }
+      .destination--Khuvsgul {
+        background-color: rgba(151, 204, 224, 0.8);
+      }
+      .destination:hover {
+        border: 4px solid rgba(255, 255, 255, 1);
+      }
+      .destination-image {
+        width: 245.34px;
+        height: 245px;
+        transform: rotate(-5deg);
+        border-radius: 50%;
+        background-size: cover;
+        position: absolute;
+        display: none;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+      }
+      .destination-image-pin {
+        width: 34px;
+        height: 34px;
+        background-image: url(images/dest-pinblue.png);
+        background-size: contain;
+        position: absolute;
+        display: block;
+        z-index: 10;
+      }
+      .destination:hover .destination-image {
+        display: block;
+      }
+      .destination__name {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(9, 9, 11, 1);
+        margin-bottom: 4px;
+      }
+      .destination__location {
+        font-size: 12px;
+        line-height: 15px;
+        font-family: "Montserrat";
+        color: rgba(24, 24, 27, 1);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .destination__location::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-image: url(images/dest-pinblack.png);
+        background-size: contain;
+        display: block;
+      }
+      .destination__day {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: rgba(247, 246, 243, 1);
+        font-size: 14px;
+        line-height: 16;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 1);
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* pricing */
+      .price-container {
+        background-image: url(images/Price.png);
+        width: 1440px;
+        margin: 0 auto;
+      }
+      .p-head {
+        font-size: 42px;
+        line-height: 51px;
+        font-weight: 600;
+        font-family: "Inter";
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 10px;
+      }
+      .p-para {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(24, 24, 27, 0.7);
+        text-align: center;
+        text-transform: capitalize;
+      }
+      .package-brochure {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 79px;
+        margin-bottom: 185px;
+      }
+      .package-type {
+        width: 384px;
+        height: 527px;
+        background-color: rgba(250, 251, 252, 1);
+        border-radius: 40px;
+        padding: 0 24px;
+        box-shadow: none;
+        transition: box-shadow 1s;
+        box-sizing: border-box;
+      }
+      .package-type:hover {
+        box-shadow: 8px 8px rgba(41, 114, 139, 0.25),
+          -8px -8px rgba(46, 65, 71, 0.4);
+      }
+      .package-type:hover .package-button {
+        background-color: rgba(24, 24, 27, 0.9);
+        color: rgba(250, 250, 250, 1);
+      }
+      .package-type:hover .standard {
+        background-color: rgba(24, 24, 27, 0.9);
+        color: rgba(250, 250, 250, 1);
+      }
+      .package-name {
+        height: 92px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(18, 19, 22, 1);
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+      .package-name::before {
+        content: "";
+        width: 36px;
+        height: 36px;
+        background-image: url(images/heart.png);
+        background-size: contain;
+        display: block;
+      }
+      .package-price {
+        font-size: 40px;
+        line-height: 49px;
+        font-weight: 600;
+        font-family: "Montserrat";
+        color: rgba(48, 48, 48, 1);
+        margin-top: 12px;
+      }
+      .price-detail {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(145, 145, 145, 1);
+        margin-top: 10px;
+        margin-bottom: 32px;
+      }
+      .standard-package-add-info {
+        width: 91px;
+        height: 27px;
+        border-radius: 13.5px;
+        background-color: rgba(105, 114, 181, 1);
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Inter";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(250, 251, 252, 1);
+        margin-top: 10px;
+        margin-bottom: 32px;
+        box-sizing: border-box;
+      }
+      .standard-package-price-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .package-content {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(18, 19, 22, 1);
+        padding-left: 40px;
+        margin-bottom: 16px;
+      }
+      .content-detail {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+        font-family: "Inter";
+        color: rgba(63, 65, 69, 1);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding-bottom: 16px;
+        box-sizing: border-box;
+      }
+      .content-detail::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(images/check.png);
+        display: block;
+        background-size: contain;
+      }
+      .package-button {
+        width: 336px;
+        height: 48px;
+        background-color: rgba(164, 209, 226, 1);
+        border-radius: 24px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        font-family: "Inter";
+        color: rgba(0, 0, 0, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 21px;
+        transition: background-color 1s, color 1s;
+        box-sizing: border-box;
+      }
+      .standard {
+        margin-top: 13px;
+      }
+      .footer-container {
+        padding: 80px 120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sns-box {
+        display: flex;
+        gap: 24px;
+      }
+      .sns {
+        width: 167px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: rgba(250, 251, 252, 1);
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        font-family: "Montserrat";
+        color: rgba(105, 114, 181, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .sns::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(images/face.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .sns-ig::before {
+        background-image: url(images/insta.png);
+      }
+      .footer-logo {
+        width: 101px;
+        height: 35px;
+        background-image: url(images/logo.png);
+        background-size: contain;
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0">
+    <main>
+      <!-- header -->
+      <header>
+        <div class="header-container">
+          <a href="--" class="header-logo"></a>
+
+          <nav class="menu-box">
+            <a class="menu-item" href="--">home</a>
+            <a class="menu-item" href="--">about</a>
+            <a class="menu-item" href="--">contact</a>
+            <a class="menu-icon" href="--"></a>
+          </nav>
+
+          <div class="header-language">EN</div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-subheading">Pure magic</div>
+          <div class="hero-mainheading">awaits!</div>
+          <div class="hero-number">2024</div>
+        </div>
+      </header>
+
+      <!-- location -->
+      <section class="location-container">
+        <div class="location location--Terkhiin-tsagaan-lake">
+          <div class="location-shade"></div>
+          <div class="location-text">Terkhiin tsagaan lake</div>
+        </div>
+
+        <div class="location location--Amarbayasgalant">
+          <div class="location-shade"></div>
+          <div class="location-text">Amarbayasgalant Monastery</div>
+        </div>
+
+        <div class="location location-Khuvsgul">
+          <div class="location-shade"></div>
+          <div class="location-text">Khuvsgul lake</div>
+        </div>
+
+        <div class="location location--Khorgo">
+          <div class="location-shade"></div>
+          <div class="location-text">Khorgiin togoo</div>
+        </div>
+      </section>
+
+      <!-- destination -->
+      <section class="destination-container">
+        <div class="destination-heading">Destination of Our Agency</div>
+        <div class="destination-subheading">Pack your bags and get ready</div>
+
+        <div class="destinations">
+          <div class="destination destination--Sukhbaatar">
+            <div>
+              <div class="destination__name">Sukhbaatar square</div>
+              <div class="destination__location">Ulaanbator</div>
+            </div>
+            <div class="destination__day">DAY 1</div>
+            <div
+              class="destination-image-pin"
+              style="top: 445px; left: 1165px"
+            ></div>
+            <div
+              class="destination-image"
+              style="
+                background-image: url(images/pin-sukh.png);
+                top: 329px;
+                left: 1032px;
+              "
+            ></div>
+          </div>
+
+          <div class="destination destination--Amarbaysgalant">
+            <div>
+              <div class="destination__name">Amarbaysgalant monastery</div>
+              <div class="destination__location">Bulgan</div>
+            </div>
+            <div class="destination__day">DAY 2</div>
+            <div
+              class="destination-image-pin"
+              style="top: 306px; left: 952px"
+            ></div>
+            <div
+              class="destination-image"
+              style="
+                background-image: url(images/pin-amar.png);
+                top: 218px;
+                left: 836px;
+              "
+            ></div>
+          </div>
+
+          <div class="destination destination--Khorgiin-togoo">
+            <div>
+              <div class="destination__name">Khorgiin togoo</div>
+              <div class="destination__location">Arkhangai</div>
+            </div>
+            <div class="destination__day">DAY 3</div>
+            <div
+              class="destination-image-pin"
+              style="top: 428px; left: 780px"
+            ></div>
+            <div
+              class="destination-image"
+              style="
+                background-image: url(images/pin-khorgo.png);
+                top: 346px;
+                left: 703px;
+              "
+            ></div>
+          </div>
+
+          <div class="destination destination--Terkhiin-tsagaan">
+            <div>
+              <div class="destination__name">Terkhiin tsagaan lake</div>
+              <div class="destination__location">Arkhangai</div>
+            </div>
+            <div class="destination__day">DAY 4</div>
+            <div
+              class="destination-image-pin"
+              style="top: 230px; left: 749px"
+            ></div>
+            <div
+              class="destination-image"
+              style="
+                background-image: url(images/pin-terkh.png);
+                top: 180px;
+                left: 652px;
+              "
+            ></div>
+          </div>
+
+          <div class="destination destination--Khuvsgul">
+            <div>
+              <div class="destination__name">Khuvsgul lake</div>
+              <div class="destination__location">Khuvsgul</div>
+            </div>
+            <div class="destination__day">DAY 5</div>
+            <div
+              class="destination-image-pin"
+              style="top: 680px; left: 952px"
+            ></div>
+            <div
+              class="destination-image"
+              style="
+                background-image: url(images/pin-khuvs.png);
+                top: 184px;
+                left: 819px;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- price and footer -->
+      <section class="price-container">
+        <div class="p-head">Pricing of Our Agency</div>
+
+        <div class="p-para">Choose a package that’s right for you</div>
+
+        <div class="package-brochure">
+          <div class="package-type">
+            <div class="package-name">Budget Package</div>
+
+            <div>
+              <div class="package-price">500$</div>
+              <div class="price-detail">Essentials Covered</div>
+            </div>
+
+            <div>
+              <div class="package-content">Includes:</div>
+              <div class="content-detail">
+                Group transportation (shared van/bus)
+              </div>
+              <div class="content-detail">
+                Standard accommodation (yurt or guesthouse)
+              </div>
+              <div class="content-detail">Guided lake tour</div>
+              <div class="content-detail">1 meal per day (breakfast)</div>
+            </div>
+
+            <div class="package-button">Select package</div>
+          </div>
+
+          <div class="package-type">
+            <div class="package-name">Standard Package</div>
+
+            <div>
+              <div class="package-price">800$</div>
+              <div class="standard-package-price-detail">
+                <div class="price-detail">Balanced Adventure</div>
+                <div class="standard-package-add-info">Popular</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="package-content">Includes:</div>
+              <div class="content-detail">
+                Comfortable transportation (mini-bus)
+              </div>
+              <div class="content-detail">
+                Mid-range accommodation (private yurt or lodge)
+              </div>
+              <div class="content-detail">Guided lake tour + nearby hiking</div>
+              <div class="content-detail">
+                2 meals per day (breakfast and dinner)
+              </div>
+            </div>
+
+            <div class="package-button standard">Select package</div>
+          </div>
+
+          <div class="package-type">
+            <div class="package-name">Luxury Package</div>
+
+            <div>
+              <div class="package-price">1200$</div>
+              <div class="price-detail">Ultimate Comfort</div>
+            </div>
+
+            <div>
+              <div class="package-content">Includes:</div>
+              <div class="content-detail">Private transportation (SUV)</div>
+              <div class="content-detail">
+                Luxury accommodation (lakefront lodge)
+              </div>
+              <div class="content-detail">
+                Guided tours (lake + reindeer herder experience)
+              </div>
+              <div class="content-detail">
+                All meals included (local cuisine)
+              </div>
+            </div>
+
+            <div class="package-button">Select package</div>
+          </div>
+        </div>
+
+        <footer class="footer-container">
+          <div class="sns-box">
+            <div class="sns">Facebook</div>
+            <div class="sns sns-ig">Instagram</div>
+          </div>
+
+          <div class="footer-logo"></div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
