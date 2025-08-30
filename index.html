@@ -121,13 +121,14 @@
         display: flex;
         gap: 40px;
         justify-content: center;
+        width: 1440px;
         padding: 65px 109.02px;
         box-sizing: border-box;
       }
       .location {
         width: 275.49px;
         height: 370px;
-        /* padding: 0 22px; */
+        padding: 0 22px;
         box-sizing: border-box;
         background-size: cover;
         border-radius: 40px;
@@ -146,7 +147,8 @@
         color: rgba(253, 253, 254, 0.8);
         text-align: center;
         text-shadow: 0 4px 4.9px rgba(0, 0, 0, 0.65);
-        z-index: 10px;
+        margin: 0;
+        /* z-index: 10px; */
         position: relative;
         transition: color 1s;
       }
@@ -166,50 +168,64 @@
         opacity: 1;
       }
 
+      /* destination */
       .destination-container {
         width: 1440px;
-        height: 1022px;
         background-image: url(images/Roadmap.png);
+        background-repeat: no-repeat;
+        background-position: center;
         margin: 0 auto;
         padding: 98px 0;
         box-sizing: border-box;
         position: relative;
       }
-      .d-head {
+      .destination-head {
+        margin: 0;
+        padding-top: 22px;
         font-size: 42px;
         line-height: 51px;
         font-weight: 600;
         font-family: "Inter";
         color: rgba(0, 0, 0, 1);
         text-align: center;
-        margin-top: 22px;
       }
-      .d-para {
+      .destination-p {
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 59px;
         font-size: 20px;
         line-height: 24px;
         font-weight: 500;
         font-family: "Inter";
         color: rgba(24, 24, 27, 0.7);
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 59px;
       }
       .destination {
         width: 513px;
         height: 112px;
         border-radius: 120px;
-        background-color: rgba(238, 233, 217, 1);
-        padding: 0 30px;
+        padding: 32px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
         border: 4px solid transparent;
         box-sizing: border-box;
+        margin-bottom: 20px;
         margin-left: 120px;
       }
       .destination:hover {
         border: 4px solid rgba(255, 255, 255, 1);
+      }
+      .destination-image-pin {
+        width: 34px;
+        height: 34px;
+        background-image: url(images/pinblue.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        display: block;
+        z-index: 10;
       }
       .destination-image {
         width: 245.34px;
@@ -220,15 +236,6 @@
         position: absolute;
         display: none;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
-      }
-      .destination-image-pin {
-        width: 34px;
-        height: 34px;
-        background-image: url(images/pinblue.png);
-        background-size: contain;
-        position: absolute;
-        display: block;
-        z-index: 10;
       }
       .destination:hover .destination-image {
         display: block;
@@ -255,7 +262,9 @@
         width: 14px;
         height: 14px;
         background-image: url(images/pinblack.png);
-        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: block;
       }
       .destination-day {
@@ -273,12 +282,16 @@
         align-items: center;
       }
 
-      .price-container {
+      /* pricing and footer */
+      .pricing-footer-container {
         background-image: url(images/Price.png);
         width: 1440px;
         margin: 0 auto;
       }
-      .p-head {
+
+      /* pricing */
+      .pricing-head {
+        margin: 0;
         font-size: 42px;
         line-height: 51px;
         font-weight: 600;
@@ -286,9 +299,11 @@
         color: rgba(0, 0, 0, 1);
         text-align: center;
         padding-top: 40px;
-        padding-bottom: 10px;
+
+        box-sizing: border-box;
       }
-      .p-para {
+      .pricing-p {
+        margin: 0;
         font-size: 20px;
         line-height: 24px;
         font-weight: 500;
@@ -296,8 +311,9 @@
         color: rgba(24, 24, 27, 0.7);
         text-align: center;
         text-transform: capitalize;
+        padding-top: 10px;
       }
-      .package-brochure {
+      .pricing-packages {
         display: flex;
         justify-content: center;
         gap: 24px;
@@ -539,214 +555,217 @@
         </div>
       </section>
 
-      <!-- destination redid -->
+      <!-- destination -->
       <section class="destination-container">
-        <div class="d-head">Destination of Our Agency</div>
+        <h3 class="destination-head">Destination of Our Agency</h3>
+        <p class="destination-p">Pack your bags and get ready</p>
 
-        <div class="d-para">Pack your bags and get ready</div>
-
-        <div>
-          <div
-            class="destination"
-            style="background-color: rgba(238, 233, 217, 1)"
-          >
-            <div>
-              <div class="destination-name">Sukhbaatar square</div>
-              <div class="destination-location">Ulaanbator</div>
-            </div>
-            <div class="destination-day">DAY 1</div>
-            <div
-              class="destination-image-pin"
-              style="top: 445px; left: 1165px"
-            ></div>
-            <div
-              class="destination-image"
-              style="
-                background-image: url(images/sukh.png);
-                top: 329px;
-                left: 1032px;
-              "
-            ></div>
+        <div
+          class="destination"
+          style="background-color: rgba(238, 233, 217, 1)"
+        >
+          <div>
+            <div class="destination-name">Sukhbaatar square</div>
+            <div class="destination-location">Ulaanbator</div>
           </div>
-
+          <div class="destination-day">DAY 1</div>
           <div
-            class="destination"
-            style="background-color: rgba(139, 184, 193, 0.8)"
-          >
-            <div>
-              <div class="destination-name">Amarbaysgalant monastery</div>
-              <div class="destination-location">Bulgan</div>
-            </div>
-            <div class="destination-day">DAY 2</div>
-            <div
-              class="destination-image-pin"
-              style="top: 306px; left: 952px"
-            ></div>
-            <div
-              class="destination-image"
-              style="
-                background-image: url(images/amar.png);
-                top: 218px;
-                left: 836px;
-              "
-            ></div>
-          </div>
-
+            class="destination-image-pin"
+            style="top: 445px; left: 1165px"
+          ></div>
           <div
-            class="destination"
-            style="background-color: rgba(170, 216, 215, 0.8)"
-          >
-            <div>
-              <div class="destination-name">Khorgiin togoo</div>
-              <div class="destination-location">Arkhangai</div>
-            </div>
-            <div class="destination-day">DAY 3</div>
-            <div
-              class="destination-image-pin"
-              style="top: 428px; left: 780px"
-            ></div>
-            <div
-              class="destination-image"
-              style="
-                background-image: url(images/khorgo.png);
-                top: 346px;
-                left: 703px;
-              "
-            ></div>
-          </div>
+            class="destination-image"
+            style="
+              background-image: url(images/pin-sukh.png);
+              top: 329px;
+              left: 1032px;
+            "
+          ></div>
+        </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(139, 192, 189, 0.8)"
-          >
-            <div>
-              <div class="destination-name">Terkhiin tsagaan lake</div>
-              <div class="destination-location">Arkhangai</div>
-            </div>
-            <div class="destination-day">DAY 4</div>
-            <div
-              class="destination-image-pin"
-              style="top: 230px; left: 749px"
-            ></div>
-            <div
-              class="destination-image"
-              style="
-                background-image: url(images/terkh.png);
-                top: 180px;
-                left: 652px;
-              "
-            ></div>
+        <div
+          class="destination"
+          style="background-color: rgba(139, 184, 193, 0.8)"
+        >
+          <div>
+            <div class="destination-name">Amarbaysgalant monastery</div>
+            <div class="destination-location">Bulgan</div>
           </div>
+          <div class="destination-day">DAY 2</div>
+          <div
+            class="destination-image-pin"
+            style="top: 306px; left: 952px"
+          ></div>
+          <div
+            class="destination-image"
+            style="
+              background-image: url(images/pin-amar.png);
+              top: 218px;
+              left: 836px;
+            "
+          ></div>
+        </div>
 
-          <div
-            class="destination"
-            style="background-color: rgba(151, 204, 224, 0.8)"
-          >
-            <div>
-              <div class="destination-name">Khuvsgul lake</div>
-              <div class="destination-location">Khuvsgul</div>
-            </div>
-            <div class="destination-day">DAY 5</div>
-            <div
-              class="destination-image-pin"
-              style="top: 680px; left: 952px"
-            ></div>
-            <div
-              class="destination-image"
-              style="
-                background-image: url(images/khuvs.png);
-                top: 184px;
-                left: 819px;
-              "
-            ></div>
+        <div
+          class="destination"
+          style="background-color: rgba(170, 216, 215, 0.8)"
+        >
+          <div>
+            <div class="destination-name">Khorgiin togoo</div>
+            <div class="destination-location">Arkhangai</div>
           </div>
+          <div class="destination-day">DAY 3</div>
+          <div
+            class="destination-image-pin"
+            style="top: 428px; left: 780px"
+          ></div>
+          <div
+            class="destination-image"
+            style="
+              background-image: url(images/pin-khorgo.png);
+              top: 346px;
+              left: 703px;
+            "
+          ></div>
+        </div>
+
+        <div
+          class="destination"
+          style="background-color: rgba(139, 192, 189, 0.8)"
+        >
+          <div>
+            <div class="destination-name">Terkhiin tsagaan lake</div>
+            <div class="destination-location">Arkhangai</div>
+          </div>
+          <div class="destination-day">DAY 4</div>
+          <div
+            class="destination-image-pin"
+            style="top: 230px; left: 749px"
+          ></div>
+          <div
+            class="destination-image"
+            style="
+              background-image: url(images/pin-terkh.png);
+              top: 180px;
+              left: 652px;
+            "
+          ></div>
+        </div>
+
+        <div
+          class="destination"
+          style="background-color: rgba(151, 204, 224, 0.8)"
+        >
+          <div>
+            <div class="destination-name">Khuvsgul lake</div>
+            <div class="destination-location">Khuvsgul</div>
+          </div>
+          <div class="destination-day">DAY 5</div>
+          <div
+            class="destination-image-pin"
+            style="top: 680px; left: 952px"
+          ></div>
+          <div
+            class="destination-image"
+            style="
+              background-image: url(images/pin-khuvs.png);
+              top: 184px;
+              left: 819px;
+            "
+          ></div>
         </div>
       </section>
 
-      <!-- price and footer redid -->
-      <section class="price-container">
-        <div class="p-head">Pricing of Our Agency</div>
+      <!-- pricing and footer -->
+      <section class="pricing-footer-container">
+        <!-- pricing -->
+        <div class="pricing-container">
+          <h3 class="pricing-head">Pricing of Our Agency</h3>
+          <p class="pricing-p">Choose a package that’s right for you</p>
 
-        <div class="p-para">Choose a package that’s right for you</div>
-
-        <div class="package-brochure">
-          <div class="package-type">
-            <div class="package-name">Budget Package</div>
-
-            <div>
-              <div class="package-price">500$</div>
-              <div class="price-detail">Essentials Covered</div>
+          <div class="pricing-packages">
+            <div class="package-type">
+              <div class="package-name">Budget Package</div>
+              <div>
+                <div class="package-price">500$</div>
+                <div class="price-detail">Essentials Covered</div>
+              </div>
+              <div>
+                <div class="package-content">
+                  Includes:
+                  <ul>
+                    <li class="content-detail">
+                      Group transportation (shared van/bus)
+                    </li>
+                    <li class="content-detail">
+                      Standard accommodation (yurt or guesthouse)
+                    </li>
+                    <li class="content-detail">Guided lake tour</li>
+                    <li class="content-detail">1 meal per day (breakfast)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="package-button">Select package</div>
             </div>
 
-            <div>
-              <div class="package-content">Includes:</div>
-              <div class="content-detail">
-                Group transportation (shared van/bus)
+            <div class="package-type">
+              <div class="package-name">Standard Package</div>
+              <div>
+                <div class="package-price">800$</div>
+                <div class="standard-package-price-detail">
+                  <div class="price-detail">Balanced Adventure</div>
+                  <div class="standard-package-add-info">Popular</div>
+                </div>
               </div>
-              <div class="content-detail">
-                Standard accommodation (yurt or guesthouse)
+              <div>
+                <div class="package-content">
+                  Includes:
+                  <ul>
+                    <li class="content-detail">
+                      Comfortable transportation (mini-bus)
+                    </li>
+                    <li class="content-detail">
+                      Mid-range accommodation (private yurt or lodge)
+                    </li>
+                    <li class="content-detail">
+                      Guided lake tour + nearby hiking
+                    </li>
+                    <li class="content-detail">
+                      2 meals per day (breakfast and dinner)
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="content-detail">Guided lake tour</div>
-              <div class="content-detail">1 meal per day (breakfast)</div>
+              <div class="package-button standard">Select package</div>
             </div>
 
-            <div class="package-button">Select package</div>
-          </div>
-
-          <div class="package-type">
-            <div class="package-name">Standard Package</div>
-
-            <div>
-              <div class="package-price">800$</div>
-              <div class="standard-package-price-detail">
-                <div class="price-detail">Balanced Adventure</div>
-                <div class="standard-package-add-info">Popular</div>
+            <div class="package-type">
+              <div class="package-name">Luxury Package</div>
+              <div>
+                <div class="package-price">1200$</div>
+                <div class="price-detail">Ultimate Comfort</div>
               </div>
+              <div>
+                <div class="package-content">
+                  Includes:
+                  <ul>
+                    <li class="content-detail">Private transportation (SUV)</li>
+                    <li class="content-detail">
+                      Luxury accommodation (lakefront lodge)
+                    </li>
+                    <li class="content-detail">
+                      Guided tours (lake + reindeer herder experience)
+                    </li>
+                    <li class="content-detail">
+                      All meals included (local cuisine)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="package-button">Select package</div>
             </div>
-
-            <div>
-              <div class="package-content">Includes:</div>
-              <div class="content-detail">
-                Comfortable transportation (mini-bus)
-              </div>
-              <div class="content-detail">
-                Mid-range accommodation (private yurt or lodge)
-              </div>
-              <div class="content-detail">Guided lake tour + nearby hiking</div>
-              <div class="content-detail">
-                2 meals per day (breakfast and dinner)
-              </div>
-            </div>
-
-            <div class="package-button standard">Select package</div>
-          </div>
-
-          <div class="package-type">
-            <div class="package-name">Luxury Package</div>
-
-            <div>
-              <div class="package-price">1200$</div>
-              <div class="price-detail">Ultimate Comfort</div>
-            </div>
-
-            <div>
-              <div class="package-content">Includes:</div>
-              <div class="content-detail">Private transportation (SUV)</div>
-              <div class="content-detail">
-                Luxury accommodation (lakefront lodge)
-              </div>
-              <div class="content-detail">
-                Guided tours (lake + reindeer herder experience)
-              </div>
-              <div class="content-detail">
-                All meals included (local cuisine)
-              </div>
-            </div>
-
-            <div class="package-button">Select package</div>
           </div>
         </div>
-
         <footer class="footer-container">
           <div class="sns-box">
             <div class="sns">Facebook</div>
