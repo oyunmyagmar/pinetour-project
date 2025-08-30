@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
     <style>
+      /* header and hero */
       .header-hero-container {
         height: 773px;
         background-image: url(images/HeroImage.png);
@@ -28,30 +29,30 @@
         background-position: center;
         margin: 0 auto;
       }
+
+      /* header */
       .header-container {
         width: 1440px;
         padding: 30px 118px;
-        box-sizing: border-box;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
+        box-sizing: border-box;
       }
       .header-logo {
-        width: 101px;
-        height: 35px;
+        width: 100px;
+        height: 34px;
         background-image: url(images/logo.png);
         background-size: contain;
       }
       .menu-box {
-        width: 392px;
         display: flex;
         gap: 24px;
       }
       .menu-item {
         width: 100px;
-        height: 22px;
         font-size: 18px;
         line-height: 22px;
         font-weight: 600;
@@ -64,6 +65,7 @@
         width: 20px;
         height: 20px;
         background-image: url(images/user.png);
+        background-size: contain;
       }
       .language {
         width: 40px;
@@ -79,49 +81,53 @@
         justify-content: center;
         align-items: center;
       }
+
+      /* hero */
       .hero-container {
         text-align: center;
-        margin: 0 auto;
+        padding-top: 99px;
       }
       .hero-uppertext {
         font-size: 80px;
-        font-weight: 400;
         line-height: 100%;
         font-family: "Bebas Neue";
         text-transform: uppercase;
         color: rgba(232, 237, 242, 0.72);
-        padding-top: 65.5px;
+        margin: 0;
       }
       .hero-maintext {
         font-size: 250px;
-        font-weight: 400;
         line-height: 100%;
         font-family: "Bebas Neue";
         color: rgba(253, 253, 254, 0.98);
         border: 2px rgba(253, 253, 254, 1);
+        margin: 0;
       }
-      .hero-year {
+      .hero-lowertext {
         font-size: 64px;
         font-weight: 900;
         line-height: 100%;
         font-family: "Hanuman";
         color: rgba(255, 255, 255, 0.8);
+        margin: 0;
       }
 
+      /* location */
       .location-container {
         background-image: url(images/Location.png);
         background-repeat: no-repeat;
         background-position: center;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
         gap: 40px;
+        justify-content: center;
+        padding: 65px 109.02px;
+        box-sizing: border-box;
       }
       .location {
         width: 275.49px;
         height: 370px;
-        margin: 65px 0;
-        padding: 0 22px;
+        /* padding: 0 22px; */
         box-sizing: border-box;
         background-size: cover;
         border-radius: 40px;
@@ -474,60 +480,62 @@
 
   <body style="margin: 0">
     <main>
-      <!-- header hero redid  -->
+      <!-- header and hero  -->
       <section class="header-hero-container">
         <div class="header-container">
-          <div class="header-logo"></div>
+          <a href="">
+            <div class="header-logo"></div>
+          </a>
 
           <nav class="menu-box">
-            <a class="menu-item" href="https://www.google.com/">home</a>
-            <a class="menu-item" href="https://www.google.com/">about</a>
-            <a class="menu-item" href="https://www.google.com/">contact</a>
-            <a class="menu-icon" href="https://www.google.com/"></a>
+            <a class="menu-item" href="">home</a>
+            <a class="menu-item" href="">about</a>
+            <a class="menu-item" href="">contact</a>
+            <a class="menu-icon" href=""></a>
           </nav>
 
           <div class="language">EN</div>
         </div>
 
         <div class="hero-container">
-          <div class="hero-uppertext">Pure magic</div>
-          <div class="hero-maintext">awaits!</div>
-          <div class="hero-year">2024</div>
+          <p class="hero-uppertext">Pure magic</p>
+          <h1 class="hero-maintext">awaits!</h1>
+          <p class="hero-lowertext">2024</p>
         </div>
       </section>
 
-      <!-- location redid -->
+      <!-- location -->
       <section class="location-container">
         <div
           class="location"
-          style="background-image: url(images/terkhiintsagaan.png)"
+          style="background-image: url(images/loc-terkhiintsagaan.png)"
         >
           <div class="location-shade"></div>
-          <div class="location-text">Terkhiin tsagaan lake</div>
+          <p class="location-text">Terkhiin tsagaan lake</p>
         </div>
 
         <div
           class="location"
-          style="background-image: url(images/amarbayasgalant.png)"
+          style="background-image: url(images/loc-amarbayasgalant.png)"
         >
           <div class="location-shade"></div>
-          <div class="location-text">Amarbayasgalant Monastery</div>
+          <p class="location-text">Amarbayasgalant Monastery</p>
         </div>
 
         <div
           class="location"
-          style="background-image: url(images/khuvsgullake.png)"
+          style="background-image: url(images/loc-khuvsgullake.png)"
         >
           <div class="location-shade"></div>
-          <div class="location-text">Khuvsgul lake</div>
+          <p class="location-text">Khuvsgul lake</p>
         </div>
 
         <div
           class="location"
-          style="background-image: url(images/khorgiintogoo.png)"
+          style="background-image: url(images/loc-khorgiintogoo.png)"
         >
           <div class="location-shade"></div>
-          <div class="location-text">Khorgiin togoo</div>
+          <p class="location-text">Khorgiin togoo</p>
         </div>
       </section>
 
